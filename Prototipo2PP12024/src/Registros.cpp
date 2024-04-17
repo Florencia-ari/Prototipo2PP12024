@@ -20,7 +20,7 @@ void Registros::menuRegistros()
 	system("cls");
 
 	cout<<"\t\t\t+-------------------------------+"<<endl;
-	cout<<"\t\t\t|         Registros             |"<<endl;
+	cout<<"\t\t\t|         CRUD                  |"<<endl;
 	cout<<"\t\t\t+-------------------------------+"<<endl;
 	cout<<"\t\t\t| 1. Ingreso Registros          |"<<endl;
 	cout<<"\t\t\t| 2. Modificar Registros        |"<<endl;

@@ -55,7 +55,7 @@ int main()
             }
         case 2:
             {
-            	 Registros registros;
+				Registros registros;
             	registros.mostrarRegistros();
 		system("pause");
 
