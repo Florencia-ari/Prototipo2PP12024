@@ -19,8 +19,6 @@ class Usuario
         bool loginUsuario();
         bool buscarLoginUsuario(string user, string passw);
 
-
-
     protected:
 
     private:

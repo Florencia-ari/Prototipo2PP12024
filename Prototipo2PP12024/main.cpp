@@ -48,16 +48,16 @@ int main()
         {
         case 1:
             {
-
             	Registros registros;
 				registros.menuRegistros();
-
 				system("cls");
-
                 break;
             }
         case 2:
             {
+            	 Registros registros;
+            	registros.mostrarRegistros();
+		system("pause");
 
 				system("cls");
 
