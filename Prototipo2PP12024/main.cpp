@@ -4,6 +4,7 @@
 #include "Portadas.h"
 #include "Usuario.h"
 #include <string>
+#include "Registros.h"
 
 using namespace std;
 
@@ -29,15 +30,16 @@ int main()
         //Limpia pantalla
         system("cls");
         //imprime en pantalla
-	cout<<"\t\t\t+-----------------------------+"<<endl;
-	cout<<"\t\t\t|    Parcial Programacion    s |"<<endl;
-	cout<<"\t\t\t+-----------------------------+"<<endl;
-	cout<<"\t\t\t| 1. Catalogos                |"<<endl;
-	cout<<"\t\t\t| 2. Informes                 |"<<endl;
-	cout<<"\t\t\t| 3. Salir del sistema        |"<<endl;
-	cout<<"\t\t\t+-----------------------------+"<<endl;
-	cout<<"\t\t\t|Opcion a escoger:[1/2/3]     |"<<endl;
-	cout<<"\t\t\t+-----------------------------+"<<endl;
+	cout<<"\t\t\t+-------------------------------+"<<endl;
+	cout<<"\t\t\t| Maria Florencia Ariaga Chiroy |"<<endl;
+	cout<<"\t\t\t|          9959-23-6741         |"<<endl;
+	cout<<"\t\t\t+-------------------------------+"<<endl;
+	cout<<"\t\t\t| 1. Catalogos                  |"<<endl;
+	cout<<"\t\t\t| 2. Informes                   |"<<endl;
+	cout<<"\t\t\t| 3. Salir del sistema          |"<<endl;
+	cout<<"\t\t\t+-------------------------------+"<<endl;
+	cout<<"\t\t\t|Opcion a escoger:[1/2/3]       |"<<endl;
+	cout<<"\t\t\t+-------------------------------+"<<endl;
 	cout<<"\t\t\tIngresa tu Opcion: ";
         cin >> opciones;
 
@@ -47,6 +49,8 @@ int main()
         case 1:
             {
 
+            	Registros registros;
+				registros.menuRegistros();
 
 				system("cls");
 
