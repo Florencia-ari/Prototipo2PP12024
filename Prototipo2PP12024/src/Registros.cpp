@@ -96,7 +96,7 @@ void Registros::menuRegistros()
 	}
 	else
 	{
-		file >> id >> nombre >> cantidad >> precio;
+		file >> id >> nombre >> tipobodega >> direccion;
 		while(!file.eof())
 		{
 			total++;
@@ -147,7 +147,7 @@ void Registros::menuRegistros()
 				cin>>nombre;
 				cout<<"\t\t\tIngrese tipo: ";
 				cin>>tipobodega;
-				cout<<"\t\t\tIngrese total: ";
+				cout<<"\t\t\tIngrese direccion: ";
 				cin>>direccion;
                 file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< tipobodega<<std::left<<std::setw(15)<< direccion << "\n";
 				found++;
@@ -188,7 +188,7 @@ void Registros::menuRegistros()
 				cout<<"\n\n\t\t\t ID: "<<id<<endl;
 				cout<<"\t\t\t Nombre: "<<nombre<<endl;
 				cout<<"\t\t\t tipo: "<<tipobodega<<endl;
-				cout<<"\t\t\t direccion "<<direccion<<endl;
+				cout<<"\t\t\t direccion: "<<direccion<<endl;
 				found++;
 			}
 			file >> id >> nombre >> tipobodega >> direccion;
@@ -231,7 +231,7 @@ void Registros::menuRegistros()
 				found++;
 				cout << "\n\t\t\tAccion Realizada Correctamente";
 			}
-			file >> id >> nombre >> cantidad >> precio;
+			file >> id >> nombre >> tipobodega>> direccion;
 		}
 		if(found==0)
 		{

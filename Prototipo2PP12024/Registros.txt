@@ -1,1 +1,1 @@
-1              bodega               cajas              CiudadGuatemala
+1              bodega         cajas          CiudadGuatemala

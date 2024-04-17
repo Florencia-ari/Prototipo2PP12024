@@ -36,11 +36,22 @@
 	<iomanip>
 	<string>
 
-1713371303 source:d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\main.cpp
+1713371883 source:d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\main.cpp
 	<iostream>
 	<unistd.h>
 	<string>
 	"Portadas.h"
 	"Usuario.h"
+	<string>
+	"Registros.h"
+
+1713372360 d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\include\registros.h
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
 	<string>
 
