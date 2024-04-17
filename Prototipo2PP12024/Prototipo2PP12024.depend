@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713370436 source:d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\src\usuario.cpp
+1713370571 source:d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\src\usuario.cpp
 	"Usuario.h"
 	<iostream>
 	"Portadas.h"

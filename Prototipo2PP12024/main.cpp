@@ -21,7 +21,50 @@ int main()
     if (accesoUsuario)
 
 
+  {
+    int opciones;
+    bool repetir = true;
+    do
+    {
+        //Limpia pantalla
+        system("cls");
+        //imprime en pantalla
+	cout<<"\t\t\t+-----------------------------+"<<endl;
+	cout<<"\t\t\t|    Parcial Programacion    s |"<<endl;
+	cout<<"\t\t\t+-----------------------------+"<<endl;
+	cout<<"\t\t\t| 1. Catalogos                |"<<endl;
+	cout<<"\t\t\t| 2. Informes                 |"<<endl;
+	cout<<"\t\t\t| 3. Salir del sistema        |"<<endl;
+	cout<<"\t\t\t+-----------------------------+"<<endl;
+	cout<<"\t\t\t|Opcion a escoger:[1/2/3]     |"<<endl;
+	cout<<"\t\t\t+-----------------------------+"<<endl;
+	cout<<"\t\t\tIngresa tu Opcion: ";
+        cin >> opciones;
 
+        //Un switch para crear el meno tipo do while
+        switch (opciones)
+        {
+        case 1:
+            {
+
+
+				system("cls");
+
+                break;
+            }
+        case 2:
+            {
+
+				system("cls");
+
+                break;
+            }
+
+			case 3: repetir = false;
+                break;
+        }
+    } while (repetir);
+    }
 
     system("cls");
     portadas.dibujarPortada("creditos.txt");
