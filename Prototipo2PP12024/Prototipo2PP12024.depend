@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1713370436 source:d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\src\usuario.cpp
+	"Usuario.h"
+	<iostream>
+	"Portadas.h"
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713370424 d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\include\usuario.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713370388 source:d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\src\portadas.cpp
+	"Portadas.h"
+	<fstream>
+	<unistd.h>
+	<fstream>
+	"Usuario.h"
+	<iostream>
+
+1713370405 d:\umg\semestre 3\programacion 1\parcial2\prototipo2pp12024\prototipo2pp12024\include\portadas.h
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
