@@ -1,5 +1,4 @@
 #include "Registros.h"
-
 #include <fstream>
 #include <unistd.h>
 #include <fstream>
@@ -24,11 +23,10 @@ void Registros::menuRegistros()
 	cout<<"\t\t\t|         Registros             |"<<endl;
 	cout<<"\t\t\t+-------------------------------+"<<endl;
 	cout<<"\t\t\t| 1. Ingreso Registros          |"<<endl;
-	cout<<"\t\t\t| 2. Despliegue Registros       |"<<endl;
-	cout<<"\t\t\t| 3. Modificar Registros        |"<<endl;
-	cout<<"\t\t\t| 4. Buscar Registros           |"<<endl;
-	cout<<"\t\t\t| 5. Borrar Registros           |"<<endl;
-	cout<<"\t\t\t| 6. Salir                      |"<<endl;
+	cout<<"\t\t\t| 2. Modificar Registros        |"<<endl;
+	cout<<"\t\t\t| 3. Buscar Registros           |"<<endl;
+	cout<<"\t\t\t| 4. Borrar Registros           |"<<endl;
+	cout<<"\t\t\t| 5. Salir                      |"<<endl;
 	cout<<"\t\t\t+-------------------------------+"<<endl;
 
 	cout<<"Ingresa una Opcion: ";
@@ -42,33 +40,25 @@ void Registros::menuRegistros()
         system("pause");
 		break;
 	case 2:
-		mostrarRegistros();
-		system("pause");
-		break;
-	case 3:
 		modificarRegistros();
 		system("pause");
 		break;
-	case 4:
+	case 3:
 		buscarRegistros();
 		system("pause");
 		break;
-	case 5:
+	case 4:
 		borrarRegistros();
 		system("cls");
 		break;
-	case 6:
-		system("cls");
-		Portadas portadas;
-    portadas .dibujarPortada("creditos.txt");
-    	exit(0);
+		case 5:
 
 		break;
 		;
 	default:
 		cout<<"\n\t\t\t Opcion invalida.";
 		}
-    }while(repetir);
+    }while(repetir,opcion!= 5);
 
 }
 
@@ -83,13 +73,13 @@ void Registros::menuRegistros()
 	cin>>id;
 	cout<<"\t\t\tIngresa Nombre: ";
 	cin>>nombre;
-	cout<<"\t\t\tIngresa cantidad: ";
-	cin>>cantidad;
-	cout<<"\t\t\tIngresa total : ";
-	cin>>precio;
+	cout<<"\t\t\tIngresa tipo: ";
+	cin>>tipobodega;
+	cout<<"\t\t\tIngresa direccion : ";
+	cin>>direccion;
 
 	file.open("Registros.txt", ios::app | ios::out);
-	file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< cantidad <<std::left<<std::setw(15)<< precio<< "\n";
+	file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< tipobodega <<std::left<<std::setw(15)<< direccion<< "\n";
 	file.close();   //Cierra el archivo
 }
 
@@ -112,9 +102,9 @@ void Registros::menuRegistros()
 			total++;
 			cout<<"\n\n\t\t\tId : "<<id<<endl;
 			cout<<"\t\t\t Nombre: "<<nombre<<endl;
-			cout<<"\t\t\t cantidad: "<<cantidad<<endl;
-			cout<<"\t\t\ttotal: "<<total<<endl;
-			file >> id >> nombre >> cantidad >> precio;
+			cout<<"\t\t\t tipo: "<<tipobodega<<endl;
+			cout<<"\t\t\tdireccion: "<<direccion<<endl;
+			file >> id >> nombre >> tipobodega >> direccion;
 		}
 		if(total==0)
 		{
@@ -142,12 +132,12 @@ void Registros::menuRegistros()
 		cout<<"\n Ingrese ID del Registro que quiere modificar: ";
 		cin>>Registros_id;
 		file1.open("Registros2.txt",ios::app | ios::out);
-		file >> id >> nombre >> cantidad >> precio;
+		file >> id >> nombre >> tipobodega >> direccion;
 		while(!file.eof())
 		{
 			if(Registros_id!=id)
 			{
-			 file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< cantidad <<std::left<<std::setw(15)<< precio << "\n";
+			 file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< tipobodega<<std::left<<std::setw(15)<< direccion << "\n";
 			}
 			else
 			{
@@ -155,14 +145,14 @@ void Registros::menuRegistros()
 				cin>>id;
 				cout<<"\t\t\tIngrese Nombre : ";
 				cin>>nombre;
-				cout<<"\t\t\tIngrese cantidad: ";
-				cin>>cantidad;
+				cout<<"\t\t\tIngrese tipo: ";
+				cin>>tipobodega;
 				cout<<"\t\t\tIngrese total: ";
-				cin>>precio;
-                file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< cantidad<<std::left<<std::setw(15)<< precio << "\n";
+				cin>>direccion;
+                file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< tipobodega<<std::left<<std::setw(15)<< direccion << "\n";
 				found++;
 			}
-			file >> id >> nombre >> cantidad >> precio;
+			file >> id >> nombre >> tipobodega >> direccion;
 
 		}
 		file1.close();
@@ -190,18 +180,18 @@ void Registros::menuRegistros()
 		cout<<"\n-------------------------Datos de Registros------------------------"<<endl;
 		cout<<"\nIngrese Id de Registroa buscar: ";
 		cin>>Registros_id;
-		file >> id >> nombre >> cantidad >> precio;
+		file >> id >> nombre >> tipobodega>> direccion;
 		while(!file.eof())
 		{
 			if(Registros_id==id)
 			{
 				cout<<"\n\n\t\t\t ID: "<<id<<endl;
 				cout<<"\t\t\t Nombre: "<<nombre<<endl;
-				cout<<"\t\t\t Cantidad: "<<cantidad<<endl;
-				cout<<"\t\t\t total: "<<precio<<endl;
+				cout<<"\t\t\t tipo: "<<tipobodega<<endl;
+				cout<<"\t\t\t direccion "<<direccion<<endl;
 				found++;
 			}
-			file >> id >> nombre >> cantidad >> precio;
+			file >> id >> nombre >> tipobodega >> direccion;
 		}
 		if(found==0)
 		{
@@ -229,12 +219,12 @@ void Registros::menuRegistros()
 		cout<<"\n Ingrese el Id del Registro: ";
 		cin>>Registros_id;
 		file1.open("Registros2.txt",ios::app | ios::out);
-		file >> id >> nombre >> cantidad >> precio ;
+		file >> id >> nombre >> tipobodega >> direccion;
 		while(!file.eof())
 		{
 			if(Registros_id!= id)
 			{
-				file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< cantidad <<std::left<<std::setw(15)<< precio << "\n";
+				file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< tipobodega <<std::left<<std::setw(15)<< direccion << "\n";
 			}
 			else
 			{

@@ -26,8 +26,8 @@ class Registros
 
 	private:
 		 string id;
-        string tipobodega;
         string nombre;
+        string tipobodega;
         string direccion;
 
 };
